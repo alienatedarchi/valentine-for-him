@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<img src="extra5.jpg" class="decor top-left">
+<img src="extra1.jpg" class="decor top-right">
+<img src="extra3.jpg" class="decor bottom-left">
+<img src="extra4.jpg" class="decor bottom-right">
+<div id="proposal" class="card">
+    <img src="BOXBACKGROUND.jpg" class="memory-pic">
+  <h1>MOTUUUU 🌙</h1>
+  <p>Even though miles separate us,<br>my heart always finds you.</p>
+  <h2>Will you be my Valentine? 💌</h2>
+
+  <button onclick="yesClicked()">YES 💖</button>
+  <button id="noBtn" onmouseover="moveNo()">NO 🙄</button>
+</div>
+<div id="memoriesPage" class="hidden card">
+  <h2>Our Scrapbook 📖</h2>
+
+  <button onclick="showAdd()">➕ Adda Memory</button>
+  <button onclick="showBook()"> dekho dekho scrapbook</button>
+  <button onclick="showBackground()"> Change Background</button>
+</div>
+
+
+<div id="addMemory" class="hidden card">
+  <h2>Add a Memory </h2>
+  <input type="file" id="photo">
+  <textarea id="caption" placeholder=" WRITE SOMETHING NAAA ..."></textarea>
+  <button onclick="saveMemory()">Save 💾</button>
+  <button onclick="goBack()">⬅ Back</button>
+</div>
+
+<div id="scrapbook" class="hidden card">
+  <h2>Our Scrapbook </h2>
+  <div id="gallery"></div>
+  <button onclick="goBack()">⬅ Back</button>
+</div>
+<div id="bgChooser" class="hidden card">
+  <h2>Choose Scrapbook Background </h2>
+
+<!-- Color options -->
+<button onclick="setBgColor('#fde2e4')">🌸 PINKII</button>
+<button onclick="setBgColor('#fff6cc')">☀️SUUNNYY</button>
+<button onclick="setBgColor('#e0f7fa')">🌊 BLUUEEOO</button>
+
+<!-- Image options -->
+<button onclick="setBgImg('background5.jpg')">
+  <img src="background5.jpg" width="40">
+</button>
+
+<button onclick="setBgImg('background2.jpg')">
+  <img src="background2.jpg" width="40">
+</button>
+<button onclick="setBgImg('background7.jpg')">
+  <img src="background7.jpg" width="40">
+</button>
+<button onclick="setBgImg('background9.jpg')">
+  <img src="background9.jpg" width="40">
+</button>
+<button onclick="setBgImg('cat_background.png')">
+  <img src="cat_background.png" width="40">
+</button>
+
+
+
+<!-- Reset -->
+<button onclick="resetBg()">🔄 Default</button>
+
+  <button onclick="goBackToMenu()">⬅ Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
